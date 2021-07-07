@@ -1,3 +1,11 @@
+.specification{
+  display: none;
+}
+// TABLET
+
+
+// DESCTOP
+@media screen and(min-width: 1200px){
 .container-specification {
     padding-bottom: 94px;
   }
@@ -6,14 +14,14 @@
     justify-content: center;
   }
   
-  .specification-list-item {
+  .specification-list__item {
     position: relative;
     
       &:not(:last-child) {
         margin-right: 30px;
       }
   }
-  .specification-list-item-img-container {
+  .specification-list__img_container {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -22,7 +30,7 @@
     padding: 27px 0;
     background-color: rgba(47, 48, 58, 0.8);
   }
-  .specification-list-item-img-container-text {
+  .specification-list__img_text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -31,3 +39,4 @@
     text-transform: uppercase;
     color: var(--c-white);
   }
+}
