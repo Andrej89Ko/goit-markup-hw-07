@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
   }
-  .social-list-item-link {
+  .social-list__link {
     display: inline-flex;
     border-radius: 50%;
     justify-content: center;
@@ -19,16 +19,16 @@
         transition-delay: 0ms;
         }
   }
-  .social-list-item:not(:last-child) {
+  .social-list__item:not(:last-child) {
     margin-right: 10px;
   }
-  .social-list-item-link-icon {
+  .social-list__link_icon {
     height: 20px;
     width: 20px;
     fill: var(--c-social);
     
-        .social-list-item-link:hover &,
-        .social-list-item-link:focus & {
+        .social-list__link:hover &,
+        .social-list__link:focus & {
         fill: var(--c-white);
     }
   }
