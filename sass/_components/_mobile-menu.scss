@@ -1,7 +1,9 @@
 .menu-container.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto
+    pointer-events: auto;
+    z-index: 2;
+
 }
 
 .menu-nav-list {
@@ -10,13 +12,24 @@
     }
 
     &__link {
+        font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 40px;
         line-height: 1.17;
         text-align: center;
         letter-spacing: 0.02em;
         color: var(--c-dark);
+
+        &:hover,
+        &:focus {
+            color: var(--c-blue);
+            transition-property: fill, color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0ms;
+        }
     }
+
 
 }
 
@@ -35,6 +48,15 @@
         line-height: 1.66;
         letter-spacing: 0.02em;
         color: #757575;
+
+        &:hover,
+        &:focus {
+            color: var(--c-blue);
+            transition-property: fill, color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0ms;
+        }
     }
 
     & .tel {
@@ -44,6 +66,7 @@
 
 .menu-social {
     display: flex;
+    flex-wrap: wrap;
 
 
     &__item:not(:last-child):after {
@@ -73,6 +96,10 @@
     visibility: hidden;
     pointer-events: none;
     background-color: var(--c-white);
+
+    // @media screen and (min-width: 768px) {
+    //     display: none;
+    // }
 }
 
 .mobile-menu {
@@ -80,6 +107,7 @@
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 25px;
+    z-index: 1;
 }
 
 .menu-btn__close {
@@ -91,11 +119,14 @@
     padding: 0;
     width: 40px;
     height: 40px;
-}
+    cursor: pointer;
 
-
-@media screen and(min-width:768px) {
-.menu-btn, .menu-container{
-    display: none;
-}
+    &:hover .menu-btn__icon-close,
+    &:focus .menu-btn__icon-close {
+        fill: var(--c-blue);
+        transition-property: fill, color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0ms;
+    }
 }
